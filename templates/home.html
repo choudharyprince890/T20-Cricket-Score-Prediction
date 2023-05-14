@@ -1,0 +1,146 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Student Exam Performance Indicator</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Student Exam Performance Prediction</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Batting Team</label>
+            <select class="form-control" name="batting_team" placeholder="Enter Batting Team" required>
+                <option class="placeholder" selected disabled value="">Select Batting Team</option>
+                <option value="New Zealand">
+                    New Zealand        
+                </option>
+                <option value="Pakistan">
+                    Pakistan        
+                </option>
+                <option value="Sri Lanka">
+                    Sri Lanka        
+                </option>
+                <option value="South Africa">
+                    South Africa        
+                </option>
+                <option value="India">
+                    India        
+                </option>
+                <option value="Australia">
+                    Australia        
+                </option>
+                <option value="West Indies">
+                    West Indies        
+                </option>
+                <option value="England">
+                    England        
+                </option>
+                <option value="Bangladesh">
+                    Bangladesh        
+                </option>
+                <option value="Afghanistan">
+                    Afghanistan        
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bowling Team</label>
+            <select class="form-control" name="bowling_team" placeholder="Enter you ethnicity" required>
+                <option class="placeholder" selected disabled value="">Select Bowling Team</option>
+                <option value="New Zealand">
+                    New Zealand        
+                </option>
+                <option value="Pakistan">
+                    Pakistan        
+                </option>
+                <option value="Sri Lanka">
+                    Sri Lanka        
+                </option>
+                <option value="South Africa">
+                    South Africa        
+                </option>
+                <option value="India">
+                    India        
+                </option>
+                <option value="Australia">
+                    Australia        
+                </option>
+                <option value="West Indies">
+                    West Indies        
+                </option>
+                <option value="England">
+                    England        
+                </option>
+                <option value="Bangladesh">
+                    Bangladesh        
+                </option>
+                <option value="Afghanistan">
+                    Afghanistan        
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">city</label>
+            <select class="form-control" name="city"
+                placeholder="city" required>
+                <option class="placeholder" selected disabled value="">Select Parent Education</option>
+                <option value="Wellington">
+                    Wellington
+                </option>
+                <option value="St Kitts">
+                    St Kitts
+                </option>
+                <option value="Hamilton">
+                    Hamilton
+                </option>
+                <option value="Nagpur">
+                    Nagpur
+                </option>
+                <option value="Durban">
+                    Durban
+                </option>
+                <option value="London">
+                    London
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Current Score</label>
+            <input class="form-control" type="number" name="current_score"
+                placeholder="Enter wicket" min='0' max='100' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Over</label>
+            <input class="form-control" type="number" name="over"
+                placeholder="Enter wicket" min='0' max='100' />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">wicket</label>
+            <input class="form-control" type="number" name="wickets_left"
+                placeholder="Enter wicket" min='0' max='100' />
+        </div>
+
+        <div class="mb-3">
+
+            <!-- <label class="form-label">Last Five</label>
+            <input class="form-control" type="number" name="last_five"
+                placeholder="Enter last_five" min='0' max='100' /> -->
+
+
+            <label class="form-label">Last Five:</label>
+            <input class="form-control" type="number" name="last_five">
+
+
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+        </div>
+    </form>
+    <h2>
+       THE  prediction is {{result}}
+    </h2>
+   <body>
+</html>
